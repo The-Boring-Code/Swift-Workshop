@@ -71,13 +71,13 @@ for age in myFriendsAge {
 
 /// Reminder about the actual value of ``mySuperFriendList``:
 ///```
-///var mySuperFriendList: [String] = [
-///    "Carlo",
-///    "Shox",
-///    "Valentina",
-///    "Samira",
-///    "Dino"
-///]
+var mySuperFriendList: [String] = [
+    "Carlo",
+    "Shox",
+    "Valentina",
+    "Samira",
+    "Dino"
+]
 ///```
 
 /// It also exists 2 other comparison operators that can be called **Boolean Operators**:
@@ -127,7 +127,7 @@ print(3 != 2)
 print("Carlo" != "Shox")
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 3339}</string>
+			<string>{1, 3318}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
