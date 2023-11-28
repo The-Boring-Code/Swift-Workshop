@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>
+// Okay, talking about restaurant and friends, let's consider one of your friends.
+/// His name is *Carlo*, let's store that in a variable.
+
+var myFriendName: String = "Carlo"
+
+/// But you have many more friends, so let's consider another friend name *Luigi*.
+
+var myOtherFriendName: String = "Luigi"
+
+/// What we can do now, is maybe gather all of our friends. For practical reasons you may want to store multiple names inside a variable.
+/// You can do that with **arrays** (list, collection, group of things) and the `[]` notation.
+
+var myFriends = [ "Carlo", "Luigi" ]
+
+/// You can also create list of variables:
+
+var myFriendList = [ myFriendName, myOtherFriendName ]
+
+/// Let's print these variables:
+
+print(myFriends)
+print(myFriendList)
+
+/// See how it is the same ?
+
+/// If you want to get your first friend name in the list, you can do it that way:
+
+print(myFriends[0])
+
+/// `0` is the first **index** (position) in the array. Don't think about it too much, it works like that with most programming language.
+
+print(myFriends[0])
+print(myFriends[1])
+
+/// You should now see Carlo and Luigi displayed in the console.
+/// But printing every names manually is a bit of a hassle.
+/// So let's write a *function*, you remember what is a *function* ?
+/// &gt;&gt;&gt; A *function* is a group of line of code you want to be able to execute multiple time without writing every lines all the time.
+/// &gt;&gt;&gt; A *function* can do one single thing or many ones.
+
+func printMyFriendsName() {
+    print(myFriends[0])
+    print(myFriends[1])
+}
+
+/// You have to use `func` keyword to declare a function.
+/// Then you write the name of the function, here it is `printMyFriendsName`
+/// After that you put `()` and start a block of code with `{` and end it with `}`
+/// Between`{` and `}` you can write all the code you want.
+/// Here, we just copied the 2 print functions that display our friends names.
+
+printMyFriendsName()
+
+/// Now you see again your friends names.
+
+/// But there's a way to do it more easily, because if you have 24 friends, it will be tiring to write all the print.
+/// Let me show you something new, **loops**.
+/// **Loops** do what you tell them to do as many time as you tell them.
+/// Here, we will be looping over our friends list:
+
+func printNamesWithLoop() {
+    
+    /// As you can see we use `for` keyword to create the loop.
+    /// We then use `friend` to refer to the specific friend we want to display the name of.
+    /// `in` means that we **iterate** over `myFriends` list.
+    /// **Iterate** means we execute the same code for each friend inside the list `myFriends`.
+    /// Eventually, we use again `{` and `}` to create a new block of code.
+    
+    for friend in myFriends {
+        print(friend)
+    }
+}
+
+/// After that you will see that it works exactly like the other one.
+
+print("printing with loop")
+printNamesWithLoop()
+
+//  MARK: Exercise N°1
+
+/// We want a list of 5 people.
+/// We want to print a text that says "hello" to each one.
+/// It should displays "Hello (my friend name)".
+/// You should use:
+/// - An Array
+/// - A Function
+/// - A For Loop
+///
+/// **Additional Exercise**:
+/// Write a function that takes an *argument* (an `Int`) and use this argument to only print the friend at the argument position of the friend list
+
+// MARK: Exercise N°1 - Solution
+
+/// We create a list of 5 people, a list of 5 `String` as you can see.
+
+var mySuperFriendList: [String] = [
+    "Carlo",
+    "Shox",
+    "Valentina",
+    "Samira",
+    "Dino"
+]
+
+/// Then we print the content of the list because we just want to check if the content
+/// is actually the correct content we just wrote.
+
+print(mySuperFriendList)
+
+/// We create then a function ``greetMyFriends`` that use a `for` loop on the list ``mySuperFriendList``.
+
+func greetMyFriends() {
+
+    /// This loop, just declare `friend` as a current variable at each iteration,
+    /// to represent the specific friend we're greeting.
+
+    for friend in mySuperFriendList {
+        print("Hello \(friend)")
+        print("Hello " + friend)
+    }
+
+}
+
+/// Execution of the function
+
+greetMyFriends()
+
+// MARK: Exercise N°1 - Additional Exercise
+
+/// Decomposition:
+/// - Write a function that takes an argument
+/// - (an `Int`) and use this argument to only print
+/// - the friend at the argument position of the friend list
+
+/// Reminder about the actual value of ``mySuperFriendList``:
+///```
+///var mySuperFriendList: [String] = [
+///    "Carlo",
+///    "Shox",
+///    "Valentina",
+///    "Samira",
+///    "Dino"
+///]
+///```
+
+/// Greet a friend specified by its `position` of type `Int` in the array ``mySuperFriendList``
+/// - Parameter position: Index of the friend in the list
+func printASpecificFriend( _ position: Int ) {
+  print("Hello \(mySuperFriendList[position])")
+}
+
+/// Execution of the specific function
+
+printASpecificFriend(2)
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 4825}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
