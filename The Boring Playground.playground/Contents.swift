@@ -229,23 +229,22 @@ func printNamesWithLoop() {
 print("printing with loop")
 printNamesWithLoop()
 
+//  MARK: Exercise N°1
 
+/// We want a list of 5 people.
+/// We want to print a text that says "hello" to each one.
+/// It should displays "Hello (my friend name)".
+/// You should use:
+/// - An Array
+/// - A Function
+/// - A For Loop
+///
+/// **Additional Exercise**:
+/// Write a function that takes an *argument* (an `Int`) and use this argument to only print the friend at the argument position of the friend list
 
+// MARK: Exercise N°1 - Solution
 
-// we want a list of 5 people
-
-// we want to print a text that says hello to each one
-
-// it should displays "Hello (my friend name)"
-
-// You should use:
-// - An Array
-// - A Function
-// - A For Loop
-
-
-// Additional exercise: Write a function that takes an argument (an Int) and use this argument to only print the friend at the argument position of the friend list
-
+/// We create a list of 5 people, a list of 5 `String` as you can see.
 
 var mySuperFriendList: [String] = [
     "Carlo",
@@ -255,71 +254,99 @@ var mySuperFriendList: [String] = [
     "Dino"
 ]
 
+/// Then we print the content of the list because we just want to check if the content
+/// is actually the correct content we just wrote.
+
 print(mySuperFriendList)
 
+/// We create then a function ``greetMyFriends`` that use a `for` loop on the list ``mySuperFriendList``.
+
 func greetMyFriends() {
+
+    /// This loop, just declare `friend` as a current variable at each iteration,
+    /// to represent the specific friend we're greeting.
+
     for friend in mySuperFriendList {
         print("Hello \(friend)")
         print("Hello " + friend)
     }
+
 }
+
+/// Execution of the function
 
 greetMyFriends()
 
 
-// Additional exercise:
+// MARK: Exercise N°1 - Additional Exercise
 
-// Write a function that takes an argument
+/// Decomposition:
+/// - Write a function that takes an argument
+/// - (an `Int`) and use this argument to only print
+/// - the friend at the argument position of the friend list
 
-// (an Int) and use this argument to only print
+/// Reminder about the actual value of ``mySuperFriendList``:
+///```
+///var mySuperFriendList: [String] = [
+///    "Carlo",
+///    "Shox",
+///    "Valentina",
+///    "Samira",
+///    "Dino"
+///]
+///```
 
-//the friend at the argument position of the friend list
-
-
-//var mySuperFriendList: [String] = [
-//    "Carlo",
-//    "Shox",
-//    "Valentina",
-//    "Samira",
-//    "Dino"
-//]
-
-print("using an argument/parameter")
-
+/// Greet a friend specified by its `position` of type `Int` in the array ``mySuperFriendList``
+/// - Parameter position: Index of the friend in the list
 func printASpecificFriend( _ position: Int ) {
   print("Hello \(mySuperFriendList[position])")
 }
 
+/// Execution of the specific function
+///
 printASpecificFriend(2)
 
 
-
-
-
-
-
-
-
-
+/// Now we're changing completely the topic.
+/// Let's take another `Array`. This time, an array of numbers, and specifically `Int`.
 
 var myFriendsAge = [ 18, 24, 32, 16, 19, 17 ]
 
-// Comparison Operators
-// < less than
-// > greater than
-// <= less or equal than
-// >= greater or equal than
+/// And then, let me introduce you to comparison operators.
+/// You know when we say something is greather than or equal to.
+/// We're talking about that right now.
 
-//for age in myFriendsAge {
-//    if age < 18 {
-//        print("You are \(age). You are a minor")
-//    } else if age < 20 {
-//        print("You are \(age). You are young.")
-//    } else {
-//        print("You are \(age). You are so old")
-//    }
-//}
+/// **Comparison Operators**:
+/// `<` : Is **Less** than ... ?
+/// `>` : Is **Greater** than ... ?
+/// `<=` : Is **Less** or **Equal** to ... ?
+/// `>=` : Is **Greater** or **Equal** to ... ?
 
+/// Here is a good example of use of those operators:
+
+for age in myFriendsAge {
+
+    /// This is called an `If` **statement**.
+    if age < 18 {
+        print("You are \(age). You are a minor")
+
+    /// This is called an `Else If` **statement**.
+    } else if age < 20 {
+        print("You are \(age). You are young.")
+
+    /// This is an `Else` **statement**.
+    } else {
+        print("You are \(age). You are so old")
+    }
+
+    /// These 3 **statements** constitutes the base of the logic and conditions in (almost) every programming languages.
+}
+
+/// We can also decide to practice a bit functions as we just saw them.
+/// Let's wrap everything inside a function.
+
+/// Comment something about the age passed as an **argument**.
+/// - Parameter age: Age we want a comment about.
 func commentAboutYourAge(age: Int) {
     if age < 18 {
         print("You are \(age). You are a minor")
@@ -330,18 +357,32 @@ func commentAboutYourAge(age: Int) {
     }
 }
 
+/// Now we can even mix **arrays**, **loops** and **functions**.
+
 for age in myFriendsAge {
     commentAboutYourAge(age: age)
 }
 
+/// These last 3 lines of code can be explained by:
+/// For each `age` in the array ``myFriendsAge``, execute the function ``commentAboutYourAge`` by passing it the `age` as the named argument `age`.
 
-//var mySuperFriendList: [String] = [
-//    "Carlo",
-//    "Shox",
-//    "Valentina",
-//    "Samira",
-//    "Dino"
-//]
+
+/// Reminder about the actual value of ``mySuperFriendList``:
+///```
+///var mySuperFriendList: [String] = [
+///    "Carlo",
+///    "Shox",
+///    "Valentina",
+///    "Samira",
+///    "Dino"
+///]
+///```
+
+/// It also exists 2 other comparison operators that can be called **Boolean Operators**:
+/// `==` : Is Equal to ... ?
+/// `!=` : Is Different from ... ?
+
+/// This is another great example of use of both of these **operators**:
 
 for friend in mySuperFriendList {
     if friend == "Carlo" {
@@ -353,23 +394,29 @@ for friend in mySuperFriendList {
     }
 }
 
-// Booleans Operators
-// == equality
-// != difference
+/// But what does mean boolean?
+/// Boolean is a means there's only 2 values.
+/// In Computer Science, a boolean value (`Bool` type in Swift) is either ``true`` or ``false``.
 
-var myBool = true
+var myBool: Bool = true
 var myOtherBool = false
 
+/// Cool thing with booleans, you can affect (assign) the result of a *boolean comparison* to a variable.
+
 var comparison = myBool == myOtherBool
+
+/// Here are some example of printing and assigning boolean values.
 
 print(myBool == myOtherBool)
 print(comparison)
 
 var anotherComparison = myBool != myOtherBool
+
 print(myBool != myOtherBool)
 print(anotherComparison)
 
-print("comparison with numbers")
+// MARK: Comparison with Numbers
+
 print(1 < 2)
 print(2 < 2)
 print(2 <= 2)
@@ -377,3 +424,199 @@ print(3 >= 2)
 print(3 != 2)
 print("Carlo" != "Shox")
 
+/// Until there, every lines contained a boolean comparison and the printing of a boolean value.
+
+/// # Now, we will completely change the topic and the level of difficulty.
+
+/// Let's imagine we want to save multiple informations about a person like "Carlo".
+/// We can save everything in as many variables as we need, for example:
+
+var carloName: String = "Carlo"
+var carloAge: Int = 19
+var carloHeight: Int = 180
+
+/// But if you start creating 3 variables for every person, and that you need to do it manually,
+/// it will quickly get tiresome. And you can't really save that into an array.
+
+/// But thankfully, programming languages and especially Swift today, include a set of things and types
+/// that enables to save all these kinds of information in one specific place and being able to move them all easily.
+
+/// The first thing we will talk about are ``class`` (classes).
+/// Classes are a way to handle a various set of data related to a specific topic.
+/// The class is a specific type of value that enables you to create other type of value.
+/// It's like declaring a function, but with more stuff inside it.
+/// Right now, we will create a class that defines a person, but into the code:
+
+/// We start by declaring the class creation by using ``class`` keywork followed by the actual name of the new class `Person`.
+/// Then we use `{` and `}` to create a new block of code.
+
+class Person {
+    
+    /// Then we use almost the same variable as we declared specifically for Carlo earlier
+
+    var name: String
+    var age: Int
+    var height: Int
+
+    /// But here comes the difference with the 3 easy variables.
+    /// Classes need `initializers` to be created.
+    /// The thing we just did is just *declaring* a class named Person.
+    /// But to create a person, Carlo for example, with every information we know about it,
+    /// we have to use the initializer to create a new person with the provided information.
+    /// An initializer is basically a function that needs to be defined inside classes.
+    /// Initializers **HAVE TO** define the value for every variables in the class declaration.
+
+    init(name: String, age: Int, height: Int) {
+
+        /// ``self`` refers to the person we're initializing right now.
+        /// It is often useful and preferable to use ``self`` to refer to properties of a class.
+        /// Here, we **NEED** to use it to distinguish the ``name`` property of `Person` from the `name` argument from the initializer.
+
+        self.name = name
+        self.age = age
+        self.height = height
+    }
+
+    /// One another cool thing of classes:
+    /// You can specify functions that only this class can use.
+    /// For example, we wrote some functions to greet every persons contained in an array earlier,
+    /// Here we can just write a function that will greet this person specifically:
+
+    func greet() {
+        print("Hello \(name)!")
+    }
+
+    /// But we can many more things and complex functions!
+
+    func greetSomeone(anotherPersonName: String) {
+        print("Hello \(anotherPersonName)! My name is \(name)")
+    }
+
+}
+
+/// We now have a new *type* called Person. And we can use it normally as any other type.
+/// To initialize a new person, you just have to "call" the Person initializer function `.init(...)`.
+/// This looks like this:
+
+let carlo: Person = Person.init(name: "Carlo", age: 19, height: 180)
+
+/// By using the dot `.` between ``Person`` and ``init``, we're telling Swift to access the ``init`` function inside the ``Person`` *class*.
+/// But in reality, what we just wrote is the complex version that nobody is actually using.
+/// If you don't want to look weird to your peer developers, just use:
+
+let antonio: Person = Person(name: "Antonio", age: 22, height: 170)
+
+/// This looks better, doesn't it?
+
+/// Now, let's do a quick vocabulary update:
+/// Variables we declared inside the *class*, like `name`, `age`, `height` are called **attributes** or **property** in Swift.
+/// Functions we declared inside the *class*, like `greet`, `greetSomeone` are called **methods**.
+/// ``carlo`` and ``antonio`` are **instances** of the *class* ``Person``.
+
+/// As any variable in this playground, `name`, `age` and, `height` are variable you can access directly and print or use in your functions.
+/// Remember that you have to use the dot `.` notation to access data stored inside a class.
+
+print(carlo.name)
+print(carlo.age)
+print(carlo.height)
+
+/// And, the main goal of everything we just did, was to be able to manage multiple people and their information
+/// with as less struggle as possible, and you'll see that it's now become easier:
+
+/// Let's create a list (an array) of people:
+/// Don't forget about `[` and `]` to create array and specify the type of a variable.
+/// Here, the type `[Person]` defines a list (an array) of instance of the class `Person`.
+
+var presenters: [Person] = [
+    carlo,
+    antonio,
+    Person(name: "Gigi", age: 24, height: 175)
+]
+
+/// You can see that you can create class instances at almost any time in the code.
+
+/// Since we now have an array, we can do some array stuff on it. Let's start with a *loop*.
+
+for presenter in presenters {
+    presenter.greet()
+}
+
+/// This code should be self-explanatory.
+/// For each `presenter` of the list `presenters`, execute the **method** ``greet`` of the considered presenter instance.
+
+// MARK: Exercise N°2
+/// Let's try with something else:
+/// Try to create a new class representing an animal, with its species, and some information and some interesting method.
+
+// MARK: Exercise N°2 - Solution
+
+/// Now if you remember, attributes are just variables stored inside the class.
+/// But what is interesting about variables?
+/// You can change their values.
+
+print(carlo.age)
+
+carlo.age = 25
+
+print(carlo.age)
+
+/// This is made possible because we declared `Person`'s age as a `var` variable.
+/// If you want you can also set it with `let` and see that happens.
+
+/// Now that we have discovered ``class``. Let's dig into something really close yet really different.
+/// Let's talk about ``struct``.
+/// Structs are a cousin of class, with almost the same way of being created and used but some technical differences.
+/// We'll go over technical differences later.
+
+/// To create a ``struct``, it's really similar to a ``class``:
+
+struct PersonStruct {
+    var name: String
+    var age: Int
+    var height: Int
+}
+
+/// We just created our first ``struct``. Be proud of yourselves.
+/// And you can already see differences.
+/// **Where is the ** `init` initializer function? You don't need it with ``struct`` (unless you're doing complicated things).
+
+/// In ``struct``, a default initializer function will be provided and it looks really like the one we use for the previous class `Person`.
+/// So we don't need to write it and it will work the same way as if we wrote it.
+
+/// ```
+/// init(name: String, age: Int, height: Int) {
+///     self.name = name
+///     self.age = age
+///     self.height = height
+/// }
+/// ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/// ## In Swift, both ``struct`` and ``class`` are used to define custom data types, but they have some key differences in terms of behavior and characteristics.
+/// Here's a brief overview:
+
+/// ## Structs:
+/// 1. Value Type: Structs are value types. When a struct instance is assigned to another variable, or passed as a parameter, a copy of the instance is made. Each instance is independent of others.
+/// 2. Stack Memory: Struct instances are usually stored in the stack memory, making them more memory-efficient for small data structures.
+/// 3. Immutability: By default, the properties of a struct are immutable. To modify a property, you need to use the 'mutating' keyword on the method.
+/// 4. No Inheritance: Structs do not support inheritance. You cannot inherit from another struct.
+
+/// ## Classes:
+/// 1. Reference Type: Classes are reference types. When a class instance is assigned to another variable, or passed as a parameter, both variables point to the same instance in memory.
+/// 2. Heap Memory: Class instances are usually stored in the heap memory, which provides more flexibility but may be less memory-efficient for small instances.
+/// 3. Mutability: Properties of a class are mutable by default. You can modify properties without using the mutating keyword.
+/// 4. Inheritance: Classes support inheritance. You can create a new class that inherits from another class.
