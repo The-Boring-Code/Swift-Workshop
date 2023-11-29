@@ -14,3 +14,4 @@
 /// - • `ageDifference` that should take an argument of type `Friend` and print the difference between the current person and the friend passed as an argument
 /// 2. Create a list of friends and iterate over it in order to try the different methods you just wrote.
 
+import Foundation
