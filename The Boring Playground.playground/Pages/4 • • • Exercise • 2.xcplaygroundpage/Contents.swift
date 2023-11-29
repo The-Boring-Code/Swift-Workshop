@@ -1,19 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>BaseFile</key>
-	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
-	<key>Diffs</key>
-	<array>
-		<dict>
-			<key>ModifiedContent</key>
-			<string>// MARK: Exercise N°2
+// MARK: Exercise N°2 - Classes & Structs
 
 /// Let's try with something else:
 /// - Try to create a new class representing an animal, with its species, and some information and some interesting method.
-/// - Create 5 instances of this class
+/// - Create multiples instances of this class
 /// - Write a loop that calls one method of these instances
+
+// MARK: Exercise N°2 - Classes & Structs - Solution
 
 class Animal {
 
@@ -47,17 +39,3 @@ for animal in animals {
     animal.makeSounds()
 }
 
-// MARK: Exercise N°2 - Solution
-</string>
-			<key>ModifiedRange</key>
-			<string>{1, 928}</string>
-			<key>OriginalContent</key>
-			<string></string>
-			<key>OriginalRange</key>
-			<string>{1, 0}</string>
-		</dict>
-	</array>
-	<key>FormatVersion</key>
-	<integer>2</integer>
-</dict>
-</plist>

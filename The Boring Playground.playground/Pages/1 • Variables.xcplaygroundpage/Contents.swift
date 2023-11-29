@@ -1,12 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>Diffs</key>
-	<array>
-		<dict>
-			<key>ModifiedContent</key>
-			<string>/// # What is a variable ?
+/// # What is a variable ?
 ///
 /// It all starts with the keyword `var`
 /// For example, I'm creating a new variable named `myVariable` that contains `1` as a value.
@@ -158,16 +150,3 @@ print(ourRestaurantSpending)
 print(individualText)
 
 /// See how it is the same in the console?
-</string>
-			<key>ModifiedRange</key>
-			<string>{1, 5314}</string>
-			<key>OriginalContent</key>
-			<string></string>
-			<key>OriginalRange</key>
-			<string>{1, 0}</string>
-		</dict>
-	</array>
-	<key>FormatVersion</key>
-	<integer>2</integer>
-</dict>
-</plist>
