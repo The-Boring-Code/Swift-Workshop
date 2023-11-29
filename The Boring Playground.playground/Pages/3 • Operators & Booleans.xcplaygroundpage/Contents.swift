@@ -1,14 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>BaseFile</key>
-	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
-	<key>Diffs</key>
-	<array>
-		<dict>
-			<key>ModifiedContent</key>
-			<string>
 /// Now we're changing completely the topic.
 /// Let's take another `Array`. This time, an array of numbers, and specifically `Int`.
 
@@ -19,24 +8,24 @@ var myFriendsAge = [ 18, 24, 32, 16, 19, 17 ]
 /// We're talking about that right now.
 
 /// **Comparison Operators**:
-/// `&lt;` : Is **Less** than ... ?
-/// `&gt;` : Is **Greater** than ... ?
-/// `&lt;=` : Is **Less** or **Equal** to ... ?
-/// `&gt;=` : Is **Greater** or **Equal** to ... ?
+/// `<` : Is **Less** than ... ?
+/// `>` : Is **Greater** than ... ?
+/// `<=` : Is **Less** or **Equal** to ... ?
+/// `>=` : Is **Greater** or **Equal** to ... ?
 
 /// Here is a good example of use of those operators:
 
 for age in myFriendsAge {
 
     /// This is called an `If` **statement**.
-    if age &lt; 18 {
+    if age < 18 {
         print("You are \(age). You are a minor")
 
-    /// This is called an `Else If` **statement**. It is another if statement.
-    } else if age &lt; 20 {
+        /// This is called an `Else If` **statement**. It is another if statement.
+    } else if age < 20 {
         print("You are \(age). You are young.")
 
-    /// This is an `Else` **statement**. It is just used when the other ones are not satisfied.
+        /// This is an `Else` **statement**. It is just used when the other ones are not satisfied.
     } else {
         print("You are \(age). You are so old")
     }
@@ -50,9 +39,9 @@ for age in myFriendsAge {
 /// Comment something about the age passed as an **argument**.
 /// - Parameter age: Age we want a comment about.
 func commentAboutYourAge(age: Int) {
-    if age &lt; 18 {
+    if age < 18 {
         print("You are \(age). You are a minor")
-    } else if age &lt; 20 {
+    } else if age < 20 {
         print("You are \(age). You are young.")
     } else {
         print("You are \(age). You are so old")
@@ -119,22 +108,11 @@ print(anotherComparison)
 
 // MARK: Comparison with Numbers
 
-print(1 &lt; 2)
-print(2 &lt; 2)
-print(2 &lt;= 2)
-print(3 &gt;= 2)
+print(1 < 2)
+print(2 < 2)
+print(2 <= 2)
+print(3 >= 2)
 print(3 != 2)
 print("Carlo" != "Shox")
-</string>
-			<key>ModifiedRange</key>
-			<string>{1, 3318}</string>
-			<key>OriginalContent</key>
-			<string></string>
-			<key>OriginalRange</key>
-			<string>{1, 0}</string>
-		</dict>
-	</array>
-	<key>FormatVersion</key>
-	<integer>2</integer>
-</dict>
-</plist>
+
+/// Until there, every lines contained a boolean comparison and the printing of a boolean value.
